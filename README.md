@@ -5,6 +5,10 @@
 - vim (Neovim) config
 - powershell config
 
+## Neovim requirement
+
+- [vim-plug](https://github.com/junegunn/vim-plug.git) - Vim plugin
+
 ## PowerShell requirement
 
 - [Nerd font](https://github.com/ryanoasis/nerd-fonts) - Hack nerd font familty
@@ -82,3 +86,35 @@ Install-Module -Name PSFzf -Scope CurrentUser -Force
   ```
   Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
   ```
+
+## Neovim setup
+
+1. Copy and paste nvim directory in user\AppData\Local
+2. Install visual studio 2022 
+3. Install vim-plugin
+``
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+``
+4. Install NodeJS
+``
+winget install -e --id OpenJS.NodeJS
+``
+5. Install NVM
+``
+scoop install nvm
+``
+6. Move directory to coc.nvim
+``
+cd $PROFILE\AppData\Local\nvim-data\plugged
+``
+7. Build coc
+``
+npm install
+``
+8. Open a vim and coc install clangd
+``
+CocInstall coc-clangd
+``
+9. Install LLVM
+
