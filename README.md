@@ -32,60 +32,60 @@
 6. Set enable acrylic to "On" and set opacity to "to" in Terminal setting defaults-appearance tab
 7. Open a powershell setting json, copy and paste to my git setting.json
 8. Install Scoop(Command-line installer)
-```
-iwr -useb get.scoop.sh | iex
-```
-```
-scoop install curl sudo jq
-```
-```
-curl 'https://api.inkdrop.app/' | jq .
-```
+    ```
+    iwr -useb get.scoop.sh | iex
+    ```
+    ```
+    scoop install curl sudo jq
+    ```
+    ```
+    curl 'https://api.inkdrop.app/' | jq .
+    ```
 9. Install git for windows
-```
-winget install -e --id Git.Git
-```
+    ```
+    winget install -e --id Git.Git
+    ```
 10. Install oh-my-posh
-```
-Install-Module posh-git -Scope CurrentUser -Force
-```
-```
-Install-Module oh-my-posh -Scope CurrentUser -Force
-```
-```
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
+    ```
+    Install-Module posh-git -Scope CurrentUser -Force
+    ```
+    ```
+    Install-Module oh-my-posh -Scope CurrentUser -Force
+    ```
+    ```
+    winget install JanDeDobbeleer.OhMyPosh -s winget
+    ```
 11. Copy powershell directory in my git in USER\.config
 12. Install Terminal Icons
-```
-Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-```
+    ```
+    Install-Module -Name Terminal-Icons -Repository PSGallery -Force
+    ```
 13. Install z - Directory jumper
-```
-Install-Module -Name z -Force
-```
+    ```
+    Install-Module -Name z -Force
+    ```
 14. Install PSReadLine - Autocompletion
-```
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
-```
-- Set PSReadLineOption
-  ```
-  Set-PSReadLineOption -PredictionSource History
-  ```
-  ```
-  Set-PSReadLineOption -PredictionViewStyle ListView
-  ```
-14. Install Fzf - Fuzzy finder
-```
-scoop install fzf
-```
-```
-Install-Module -Name PSFzf -Scope CurrentUser -Force
-```
-- Set PsFzfOption
-  ```
-  Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
-  ```
+    ```
+    Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+    ```
+    - Set PSReadLineOption
+        ```
+        Set-PSReadLineOption -PredictionSource History
+        ```
+        ```
+        Set-PSReadLineOption -PredictionViewStyle ListView
+    ```
+15. Install Fzf - Fuzzy finder
+    ```
+    scoop install fzf
+    ```
+    ```
+    Install-Module -Name PSFzf -Scope CurrentUser -Force
+    ```
+    - Set PsFzfOption
+        ```
+        Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+        ```
 
 ## Neovim setup
 
